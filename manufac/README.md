@@ -23,8 +23,8 @@ React Functional Components
 
 # Output Screen Shot
 
-![Alt text](image.png)
-![Alt text](image-1.png)
+![Alt text](/manufac//src/Images/image-1.png)
+![Alt text](/manufac//src/Images/image.png)
 
 # Drive Link for Output ScreenShots
 

@@ -10,7 +10,6 @@ function Calculations() {
       const URL = "https://650bf03047af3fd22f66be58.mockapi.io/manufac";
       const response = await fetch(URL);
       const finaldata = await response.json();
-      // console.log(finaldata)
       setData(finaldata);
     };
     getData();
