@@ -24,13 +24,15 @@ function Gamma({calculateMode,calculateMedian,calculateMean,gammaData}) {
         <tr>
           <th>Gamma Median</th>
           {Object.values(gammaData).map((val) => (
-            <td>{calculateMedian(val)}</td>
+            <td>{calculateMedian(val).toFixed(3)}</td>
           ))}
         </tr>
         <tr>
           <th>Gamma Mode</th>
           {Object.values(gammaData).map((val) => (
-            <td>{calculateMode(val)}</td>
+            <td>{calculateMode(val).length > 1
+              ? calculateMode(val).join(",")
+              : calculateMode(val)}</td>
           ))}
         </tr>
       </tbody>

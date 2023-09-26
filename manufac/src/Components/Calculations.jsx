@@ -7,7 +7,7 @@ function Calculations() {
 
   useEffect(() => {
     const getData = async () => {
-      const URL = "https://650bf03047af3fd22f66be58.mockapi.io/manufac";
+      const URL = "https://run.mocky.io/v3/bc4130c6-5e67-4789-ab05-2f1189a908ba";
       const response = await fetch(URL);
       const finaldata = await response.json();
       setData(finaldata);
@@ -65,14 +65,14 @@ function Calculations() {
     if (!groupedData[alcoholKey]) {
       groupedData[alcoholKey] = [];
     }
-    groupedData[alcoholKey].push(flavanoidValue);
+    groupedData[alcoholKey].push(parseFloat(flavanoidValue));
   });
 
   const gammaData = {};
   data.forEach((entry) => {
     const alcoholKey = entry["Alcohol"];
     const gammaKey = parseFloat(
-      ((entry["Ash"] * entry["Hue"]) / entry["Magnesium"]).toFixed(3)
+      ((entry["Ash"] * entry["Hue"]) / entry["Magnesium"]).toFixed(2)
     );
 
     if (!gammaData[alcoholKey]) {

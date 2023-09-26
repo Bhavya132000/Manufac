@@ -33,7 +33,9 @@ function Flavanoid({calculateMode,calculateMedian,calculateMean,groupedData}) {
           <tr>
             <th>Flavanoids Mode</th>
             {Object.values(groupedData).map((val) => (
-              <td>{calculateMode(val)}</td>
+              <td>{calculateMode(val).length > 1
+                ? calculateMode(val).join(",")
+                : calculateMode(val)}</td>
             ))}
           </tr>
         </tbody>
